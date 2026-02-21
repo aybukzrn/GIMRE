@@ -1,95 +1,150 @@
-import React, { useState } from 'react';
+import { useState } from "react";
+import logo from "../../public/images/logo.jpg";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const handleDropdown = (menu) => {
+    setActiveDropdown(activeDropdown === menu ? null : menu);
+  };
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
-          
-          {/* Sol Kısım: Logo ve Enstitü Adı */}
-          <div className="flex items-center">
-            <a href="/" className="flex-shrink-0 flex items-center gap-3">
-              {/* Logo Placeholder */}
-              <div className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center text-white font-bold">
-                MR
-              </div>
-              <span className="font-bold text-xl text-slate-800 leading-tight">
-                Girişimsel MR <br className="hidden sm:block" />
-                <span className="text-sm text-blue-600 font-medium">Klinik AR-GE Enstitüsü</span>
-              </span>
-            </a>
-          </div>
+    <header className="w-full bg-white border-b-4 border-sarı sticky top-0 z-50 px-0">
+      <div className="mx-auto p-5 flex items-center justify-between h-[85px]">
 
-          {/* Orta Kısım: Temel Navigasyon (Desktop) */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="/hakkimizda" className="text-slate-600 hover:text-blue-700 font-medium transition-colors">
-              Hakkımızda
-            </a>
-            <a href="/yayinlar" className="text-slate-600 hover:text-blue-700 font-medium transition-colors">
-              Yayınlar
-            </a>
-            <a href="/etkinlikler" className="text-slate-600 hover:text-blue-700 font-medium transition-colors">
-              Etkinlikler
-            </a>
-          </div>
+        {/* Logo */}
 
-          {/* Sağ Kısım: CTA Butonları (Desktop) */}
-          <div className="hidden md:flex items-center space-x-4">
-            <a href="/arastirmalar" className="text-blue-700 font-semibold hover:text-blue-800 transition-colors">
-              Araştırmalarımız
-            </a>
-            <a href="/ekip" className="text-slate-600 font-semibold hover:text-blue-700 transition-colors">
-              Ekip
-            </a>
-            <a 
-              href="/iletisim" 
-              className="bg-blue-700 text-white px-5 py-2.5 rounded-md font-medium hover:bg-blue-800 transition-colors shadow-sm"
+        <div className="flex flex-row items-center mx-8">
+          <img src={logo} alt="Logo" className=" h-20" />
+        </div>
+
+
+
+        {/* Hamburger sonra bakıcam buna */}
+        <div
+          className="lg:hidden flex flex-col gap-1 cursor-pointer"
+          onClick={toggleMenu}
+        >
+          <span className="w-6 h-[2px] bg-gray-800"></span>
+          <span className="w-6 h-[2px] bg-gray-800"></span>
+          <span className="w-6 h-[2px] bg-gray-800"></span>
+        </div>
+
+
+
+
+        {/* Nav */}
+
+        <nav
+          className={`absolute lg:static top-[75px] left-0 w-full lg:w-auto bg-white lg:flex items-start lg:items-center gap-7 px-8 lg:px-0 py-6 lg:py-0 transition-all duration-300 
+            ${menuOpen ? "flex flex-col" : "hidden lg:flex"
+            }`}
+        >
+          <a href="/" className="text-sm font-medium text-gray-700 hover:text-[#1c2b4a] transition">
+            Ana Sayfa
+          </a>
+
+          <a href="/hakkimizda" className="text-sm font-medium text-gray-700 hover:text-[#1c2b4a] transition">
+            Hakkımızda
+          </a>
+
+          {/* Araştırma Alanları */}
+          <div
+            className="relative"
+            onMouseEnter={() => setActiveDropdown("research")}
+            onMouseLeave={() => setActiveDropdown(null)}
+          >
+            <span
+              onClick={() => handleDropdown("research")}
+              className="text-sm font-medium text-gray-700 hover:text-[#1c2b4a] cursor-pointer"
             >
-              İletişime Geçin
-            </a>
-            
-            {/* Dil Seçeneği (İhtiyaç analizindeki TR/EN desteği) */}
-            <div className="border-l border-gray-300 pl-4 ml-2 flex gap-2">
-                <button className="text-sm font-bold text-blue-700">TR</button>
-                <span className="text-gray-400">|</span>
-                <button className="text-sm font-medium text-gray-500 hover:text-blue-700">EN</button>
+              Araştırma Alanları
+            </span>
+
+            <div
+              className={`${activeDropdown === "research" ? "block" : "hidden"
+                } absolute left-0 mt-4 w-56 bg-white border border-gray-200 shadow-lg py-3`}
+            >
+              <a href="/arastirma/nororadyoloji" className="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50">
+                Girişimsel Nöroradyoloji
+              </a>
+              <a href="/arastirma/mr" className="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50">
+                İleri MR Görüntüleme
+              </a>
+              <a href="/arastirma/yapay-zeka" className="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50">
+                Yapay Zeka & Görüntüleme
+              </a>
+              <a href="/arastirma/translasyonel" className="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50">
+                Translasyonel Araştırmalar
+              </a>
             </div>
           </div>
 
-          {/* Mobil Menü Butonu */}
-          <div className="flex items-center md:hidden">
-            <button 
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-600 hover:text-blue-700 focus:outline-none"
+          <a href="/projeler" className="text-sm font-medium text-gray-700 hover:text-[#1c2b4a] transition">
+            Projeler
+          </a>
+
+          {/* Yayınlar */}
+          <div
+            className="relative"
+            onMouseEnter={() => setActiveDropdown("publications")}
+            onMouseLeave={() => setActiveDropdown(null)}
+          >
+            <span
+              onClick={() => handleDropdown("publications")}
+              className="text-sm font-medium text-gray-700 hover:text-[#1c2b4a] cursor-pointer"
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                {isOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
+              Yayınlar
+            </span>
+
+            <div
+              className={`${activeDropdown === "publications" ? "block" : "hidden"
+                } absolute left-0 mt-4 w-56 bg-white border border-gray-200 shadow-lg py-3`}
+            >
+              <a href="/yayinlar/sci" className="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50">
+                SCI / SCI-E
+              </a>
+              <a href="/yayinlar/ulusal" className="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50">
+                Ulusal Makaleler
+              </a>
+              <a href="/yayinlar/tezler" className="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50">
+                Tezler
+              </a>
+              <a href="/yayinlar/bildiriler" className="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50">
+                Bildiriler
+              </a>
+            </div>
           </div>
-        </div>
+
+          <a href="/ekip" className="text-sm font-medium text-gray-700 hover:text-[#1c2b4a] transition">
+            Ekip
+          </a>
+
+          <a href="/etkinlikler" className=" text-sm font-medium text-gray-700 hover:text-[#1c2b4a] transition">
+            Etkinlikler
+          </a>
+
+          <a href="/is-birlikleri" className=" text-sm font-medium text-gray-700 hover:text-[#1c2b4a] transition">
+            İş Birlikleri
+          </a>
+
+          <a
+            href="/iletisim"
+            className="text-sm font-medium border border-[#1c2b4a] px-4 py-2 rounded-md text-[#1c2b4a] hover:bg-[#1c2b4a] hover:text-white transition"
+          >
+            İletişim
+          </a>
+
+          <div className="lang-switch">
+            <button className="lang-active">TR</button>
+            <span className="lang-separator">|</span>
+            <button>EN</button>
+          </div>
+        </nav>
       </div>
-
-      {/* Mobil Menü (Açılır Kapanır Kısım) */}
-      {isOpen && (
-        <div className="md:hidden bg-slate-50 border-t border-gray-200">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="/hakkimizda" className="block px-3 py-2 text-base font-medium text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-md">Hakkımızda</a>
-            <a href="/arastirmalar" className="block px-3 py-2 text-base font-medium text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-md">Araştırmalarımız</a>
-            <a href="/ekip" className="block px-3 py-2 text-base font-medium text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-md">Ekip</a>
-            <a href="/yayinlar" className="block px-3 py-2 text-base font-medium text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-md">Yayınlar</a>
-            <a href="/iletisim" className="block px-3 py-2 text-base font-medium text-blue-700 hover:bg-blue-100 rounded-md">İletişime Geçin</a>
-          </div>
-        </div>
-      )}
-    </nav>
+    </header>
   );
-};
-
-export default Navbar;
+}
