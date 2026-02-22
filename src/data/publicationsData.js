@@ -1,0 +1,62 @@
+const PUBLICATIONS_DATA = [
+    {
+      id: "pub-001",
+      type: "SCI",
+      title: "Advanced diffusion tensor imaging in neurodegenerative diseases",
+      authors: "Algın O., Zeren A., Yılmaz M.",
+      journal: "European Radiology",
+      year: 2024,
+      volume: "34(2)",
+      pages: "123-134",
+      doi: "10.1007/s00330-023-10000-x",
+      pdf: "#",
+      abstract: "Bu çalışma, nörodejeneratif hastalıklarda ileri difüzyon tensör görüntüleme (DTI) tekniklerinin erken teşhisteki rolünü araştırmaktadır...",
+      keywords: ["MRI", "DTI", "Neurodegeneration", "Deep Learning"],
+      citations: 45
+    },
+    {
+      id: "pub-002",
+      type: "Ulusal",
+      title: "Akut İskemik İnmede Mekanik Trombektomi Sonuçlarımız",
+      authors: "Algın O., Demir C.",
+      journal: "Türk Nöroloji Dergisi",
+      year: 2023,
+      volume: "29(4)",
+      pages: "210-218",
+      doi: "10.4274/tnd.2023.0000",
+      pdf: "#",
+      abstract: "Kliniğimizde son 5 yılda uygulanan mekanik trombektomi vakalarının retrospektif analizi sunulmuştur...",
+      keywords: ["İnme", "Trombektomi", "Nöroradyoloji"],
+      citations: 12
+    },
+    {
+      id: "pub-003",
+      type: "Bildiri",
+      title: "Automated Brain Tumor Segmentation using U-Net",
+      authors: "Zeren A., Algın O.",
+      journal: "International Conference on Medical Image Computing",
+      year: 2024,
+      volume: "12",
+      pages: "45-50",
+      doi: "10.1109/ICMIC.2024.0000",
+      pdf: null,
+      abstract: "Bu bildiride, MR görüntülerinden beyin tümörlerinin otomatik olarak bölütlenmesi için geliştirilen optimize edilmiş U-Net modeli tanıtılmaktadır.",
+      keywords: ["AI", "Segmentation", "Brain Tumor", "U-Net"],
+      citations: 8
+    },
+    {
+      id: "pub-004",
+      type: "Tez",
+      title: "Yapay Zeka Destekli MR Görüntüleme Protokollerinin Optimizasyonu",
+      authors: "Yılmaz M. (Danışman: Algın O.)",
+      journal: "Ankara Üniversitesi Sağlık Bilimleri Enstitüsü",
+      year: 2022,
+      volume: null,
+      pages: "1-120",
+      doi: null,
+      pdf: "#",
+      abstract: "Doktora tezi çalışması. MR cihazlarında çekim süresini kısaltırken görüntü kalitesini artıran AI tabanlı rekonstrüksiyon algoritmaları geliştirilmiştir.",
+      keywords: ["MRG", "Yapay Zeka", "Optimizasyon"],
+      citations: 3
+    }
+  ];

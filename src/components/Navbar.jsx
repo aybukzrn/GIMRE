@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import logo from "../../public/images/logo.jpg";
+import { href } from "react-router-dom";
 
 const NAV_ITEMS = [
   { label: "Hakkımızda", href: "/hakkimizda" },
@@ -14,13 +15,7 @@ const NAV_ITEMS = [
   },
   { label: "Projeler", href: "/projeler" },
   {
-    label: "Yayınlar",
-    children: [
-      { label: "SCI / SCI-E", href: "/yayinlar/sci" },
-      { label: "Ulusal Makaleler", href: "/yayinlar/ulusal" },
-      { label: "Tezler", href: "/yayinlar/tezler" },
-      { label: "Bildiriler", href: "/yayinlar/bildiriler" },
-    ],
+    label: "Yayınlar", href: "/yayinlar"
   },
   { label: "Ekip", href: "/ekip" },
   { label: "Etkinlikler", href: "/etkinlikler" },

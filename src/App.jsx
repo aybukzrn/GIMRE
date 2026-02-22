@@ -10,8 +10,8 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import AboutUsPage from './pages/AboutUsPage';
 import ResearchAreaPage from './pages/ResearchAreaPage';
+import PublicationsPage from './pages/PublicationsPage';
 
-// import Yayinlar from './pages/Yayinlar';
 // import Ekip from './pages/Ekip';
 // import Iletisim from './pages/Iletisim';
 
@@ -28,6 +28,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/hakkimizda" element={<AboutUsPage />} />
             <Route path="/arastirma/:slug" element={<ResearchAreaPage />} />
+            <Route path="/yayinlar" element={<PublicationsPage />} />
             
 
             {/* <Route path="/arastirmalar" element={<ArastirmaAlanlari />} />
