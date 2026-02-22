@@ -46,14 +46,14 @@ export default function PublicationAndEvents() {
                                     {/* etkinlik detayı */}
                                     <div className="flex flex-col justify-center">
                                         <h3 className="text-lg font-bold text-gray-900">{event.title}</h3>
-                                        <div className="text-sm text-gray-500 mt-3 flex items-center sm:flex-row divide-x divide-gray-400">
+                                        <div className="text-sm text-gray-500 mt-3 flex flex-col  lg:items-center lg:flex-row lg:divide-x lg:divide-gray-400">
 
-                                            <span className="flex items-center gap-2 pr-2">
+                                            <span className="flex items-center  gap-2 lg:pr-2">
                                                 <img src="/images/clock.svg" alt="Saat" className="w-5 h-5 object-contain" />
                                                 {event.time}
                                             </span>
 
-                                            <span className="flex items-center gap-2 pl-2">
+                                            <span className="flex items-center mt-3 text-[12px] pl-[2px] lg:text-sm lg:mt-0 gap-2 lg:pl-2">
                                                 <img src="/images/location.svg" alt="Saat" className="w-4 h-4 object-contain" />
                                                 {event.location}
                                             </span>

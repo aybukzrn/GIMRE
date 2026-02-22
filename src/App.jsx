@@ -8,38 +8,33 @@ import Footer from './components/Footer';
 
 // --- SAYFALAR (PAGES) ---
 import HomePage from './pages/HomePage';
-// Aşağıdaki sayfaları oluşturdukça import edebilirsin. Şimdilik hata vermemesi için
-// boş bir div döndüren geçici bileşenler olarak düşünebilirsin veya yorum satırına alabilirsin.
-// import Hakkimizda from './pages/Hakkimizda'; 
-// import ArastirmaAlanlari from './pages/ArastirmaAlanlari';
+import AboutUsPage from './pages/AboutUsPage';
+import ResearchAreaPage from './pages/ResearchAreaPage';
+
 // import Yayinlar from './pages/Yayinlar';
 // import Ekip from './pages/Ekip';
 // import Iletisim from './pages/Iletisim';
 
 function App() {
   return (
-    // Router sarmalayıcısı tüm yönlendirme işlemlerini başlatır
     <Router>
-      
-      {/* Sayfanın tam ekran yüksekliğini (min-h-screen) almasını ve 
-        Footer'ın her zaman en altta kalmasını sağlayan yapı 
-      */}
+
       <div className="flex flex-col min-h-screen">
-        
-        {/* Navbar her sayfada en üstte sabit kalacak */}
+
         <Navbar />
 
-        {/* Ana içerik alanı (flex-grow ile kalan boşluğu doldurur) */}
         <main className="flex-grow">
           <Routes>
-            {/* Faz 1 - Temel Sayfalar (İhtiyaç Analizi MVP listesi) */}
             <Route path="/" element={<HomePage />} />
-            {/* <Route path="/hakkimizda" element={<Hakkimizda />} />
-            <Route path="/arastirmalar" element={<ArastirmaAlanlari />} />
+            <Route path="/hakkimizda" element={<AboutUsPage />} />
+            <Route path="/arastirma/:slug" element={<ResearchAreaPage />} />
+            
+
+            {/* <Route path="/arastirmalar" element={<ArastirmaAlanlari />} />
             <Route path="/yayinlar" element={<Yayinlar />} />
             <Route path="/ekip" element={<Ekip />} />
-            <Route path="/iletisim" element={<Iletisim />} /> */}
-            
+            <Route path="/iletisim" element={<Iletisim />} />  */}
+
             {/* 404 Sayfası (Kullanıcı olmayan bir linke giderse) */}
             <Route path="*" element={
               <div className="flex items-center justify-center h-full py-20">
@@ -49,9 +44,9 @@ function App() {
           </Routes>
         </main>
 
-        
+
         <Footer />
-        
+
       </div>
     </Router>
   );

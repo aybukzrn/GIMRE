@@ -18,16 +18,16 @@ const Footer = () => {
               </span>
             </a>
             
-            <h2 className='text-koyu mb-2 mt-4'>Bize buralardan ulaşabilirsiniz</h2>
+            <h2 className='text-koyu text-center mb-2 mt-4'>Bize buralardan ulaşabilirsiniz</h2>
             <div className="flex gap-4 items-center justify-center">
                 
-              <a href="#" className="w-8 h-8 flex items-center">
-                <span><img src="images/linkedin.svg"/></span> {/* Buraya LinkedIn SVG ikonu eklenebilir */}
+              <a href="#" className="w-12 h-8 flex items-center p-2 hover:shadow-md rounded-lg">
+                <span><img src="images/linkedin.svg"/></span>
               </a>
-              <a href="#" className="w-8 h-8 flex items-center">
-                <span><img src="images/youtube.svg"/></span> {/* Buraya X/Twitter SVG ikonu eklenebilir */}
+              <a href="#" className="w-12 h-8 flex items-center p-2 hover:shadow-md rounded-lg">
+                <span><img src="images/youtube.svg"/></span>
               </a>
-              <a href="#" className="w-8 h-8 flex items-center">
+              <a href="#" className="w-8 h-8 flex items-center p-2 hover:shadow-md rounded-lg">
                 <span><BsTwitterX /></span>
               </a>
             </div>
@@ -92,15 +92,15 @@ const Footer = () => {
         </div>
 
         
-        <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-gray-200 pt-8 flex md:flex-row justify-between lg:items-center gap-6 flex-col-reverse">
           <p className="text-xs text-gray-500 text-center md:text-left">
             &copy; {new Date().getFullYear()} Girişimsel MR Klinik AR-GE Enstitüsü. Tüm hakları saklıdır.
           </p>
-          <div className="flex gap-4 text-xs text-gray-500">
+          <div className="flex flex-col lg:flex-row lg:gap-4 text-xs text-gray-500">
             <a href="/gizlilik" className="hover:underline transition">Gizlilik Politikası</a>
-            <span>|</span>
+            <span className="opacity-0 lg:opacity-100">|</span>
             <a href="/kullanim-kosullari" className="hover:underline transition">Kullanım Koşulları</a>
-            <span>|</span>
+            <span className="opacity-0 lg:opacity-100">|</span>
             <a href="/kvkk" className="hover:underline transition">KVKK Aydınlatma Metni</a>
           </div>
         </div>

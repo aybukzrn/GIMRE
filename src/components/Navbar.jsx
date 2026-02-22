@@ -91,7 +91,7 @@ export default function Navbar() {
                       <a
                         key={child.label}
                         href={child.href}
-                        className="block py-2 text-sm text-gray-600 hover:text-[#1c2b4a] hover:bg-slate-200 rounded-lg px-2"
+                        className="block py-2 text-sm text-gray-600 hover:text-[#1c2b4a] hover:bg-slate-300 hover:bg-opacity-30 rounded-lg px-2"
                       >
                         {child.label}
                       </a>
