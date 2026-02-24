@@ -28,7 +28,7 @@ export default function ProjectFilter({
         <select
           value={filterArea}
           onChange={(e) => setFilterArea(e.target.value)}
-          className="w-full md:w-64 px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#1c2b4a]"
+          className="w-full md:w-64 px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-gray-700 focus:outline-none"
         >
           {areas.map(area => (
             <option key={area} value={area}>{area}</option>
