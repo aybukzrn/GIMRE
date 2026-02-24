@@ -13,7 +13,7 @@ export default function Hero() {
 
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                    <a href="/arastirmalar" className=" bg-red-600 hover:bg-red-900 text-white font-semibold py-3 px-8 rounded-md transition duration-300">
+                    <a href="/arastirma/nororadyoloji" className=" bg-red-600 hover:bg-red-900 text-white font-semibold py-3 px-8 rounded-md transition duration-300">
                         Araştırmalarımız
                     </a>
                     <a href="/ekip" className="bg-green-600 hover:bg-green-900 text-white font-semibold py-3 px-8 rounded-md transition duration-300">

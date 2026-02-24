@@ -12,6 +12,8 @@ import AboutUsPage from './pages/AboutUsPage';
 import ResearchAreaPage from './pages/ResearchAreaPage';
 import PublicationsPage from './pages/PublicationsPage';
 import ProjectPage from './pages/ProjectsPage';
+import TeamPage from './pages/TeamPage';
+import ContactPage from './pages/ContactPage';
 
 // import Ekip from './pages/Ekip';
 // import Iletisim from './pages/Iletisim';
@@ -31,6 +33,8 @@ function App() {
             <Route path="/arastirma/:slug" element={<ResearchAreaPage />} />
             <Route path="/yayinlar" element={<PublicationsPage />} />
             <Route path="/projeler" element={<ProjectPage />} />
+            <Route path="/ekip" element={<TeamPage />} />
+            <Route path="/iletisim" element={<ContactPage />} />
 
 
             {/* <Route path="/arastirmalar" element={<ArastirmaAlanlari />} />

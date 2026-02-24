@@ -2,7 +2,7 @@ export default function VisionAndMission() {
     return (
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-col gap-8">
             {/* Misyon */}
-            <div className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+            <div className="bg-white p-8 rounded-2xl shadow-lg transition-shadow">
                 <div className="w-12 h-12 bg-mavi text-white rounded-lg flex items-center justify-center mb-6">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                 </div>
@@ -22,7 +22,7 @@ export default function VisionAndMission() {
             <div className="flex flex-col lg:flex-row gap-10">
 
             {/* Vizyon */}
-            <div className="flex-1 bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+            <div className="flex-1 bg-white p-8 rounded-lg shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-mavi text-white rounded-lg flex items-center justify-center mb-6">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                 </div>
@@ -33,7 +33,7 @@ export default function VisionAndMission() {
             </div>
 
             {/* Değerler */}
-            <div className="flex-1 bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+            <div className="flex-1 bg-white p-8 rounded-2xl shadow-lg transition-shadow">
                 <div className="w-12 h-12 bg-mavi text-white rounded-lg flex items-center justify-center mb-6">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>

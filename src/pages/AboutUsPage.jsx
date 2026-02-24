@@ -10,13 +10,13 @@ import Profile from "../components/AboutUsPage/Profile";
 
 export default function AboutUsPage() {
     return (
-        <div className="min-h-screen bg-gray-50 text-gray-800">
+        <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
 
-            <section className="bg-[#071E3D] text-white py-20 px-6 ">
+            <section className="max-w-7xl mx-auto">
                 <Hero />
             </section>
 
-            <section className="py-16 px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <section className="py-10 px-8 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white rounded-2xl shadow-lg transition-shadow mb-10 mt-10">
                 <FoundingStory />
 
                 <div className="h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg relative">
@@ -36,15 +36,21 @@ export default function AboutUsPage() {
                 </div>
             </section>
 
-            <section className="bg-white py-16 px-6 border-y border-gray-200">
+            <div className="w-full h-[0.5px] bg-gray-300 mb-10"></div>
+
+            <section>
                 <VisionAndMission />
             </section>
+
+            <div className="w-full h-[0.5px] bg-gray-300 mt-10"></div>
 
             <section className="py-16 px-6 max-w-4xl mx-auto">
                 <Timeline />
             </section>
 
-            <section className="bg-white py-16 px-6">
+            <div className="w-full h-[0.5px] bg-gray-300 mb-10"></div>
+
+            <section className="">
                 <Profile />
             </section>
 

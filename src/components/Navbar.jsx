@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import logo from "../../public/images/logo.jpg";
-import { href } from "react-router-dom";
 
 const NAV_ITEMS = [
   { label: "Hakkımızda", href: "/hakkimizda" },
@@ -19,7 +18,8 @@ const NAV_ITEMS = [
   },
   { label: "Ekip", href: "/ekip" },
   { label: "Etkinlikler", href: "/etkinlikler" },
-  { label: "İş Birlikleri", href: "/is-birlikleri" },
+  { label: "İş Birlikleri", href: "/is-birlikleri" }
+  // { label: "İletişim", href: "/iletisim" },
 ];
 
 export default function Navbar() {
@@ -27,7 +27,6 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeLang, setActiveLang] = useState("TR");
 
-  // LocalStorage'dan dili yükle
   useEffect(() => {
     const savedLang = localStorage.getItem("lang");
     if (savedLang) {
@@ -62,15 +61,12 @@ export default function Navbar() {
 
   return (
     <>
-      {/* STICKY NAVBAR */}
       <header className="w-full sticky top-0 z-50 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 h-[85px] flex items-center justify-between">
-          {/* Logo */}
           <a href="/" className="flex items-center">
             <img src={logo} alt="Kurum Logosu" className="h-14 w-auto" />
           </a>
 
-          {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center gap-8">
             {NAV_ITEMS.map((item) =>
               item.children ? (
@@ -80,7 +76,6 @@ export default function Navbar() {
                   </button>
 
                   <div className="absolute top-full mt-5 w-48 bg-white shadow-xl rounded-xl border border-gray-200 p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                    {/* Görünmez köprü (hover kaybolmasını önler) */}
 
                     {item.children.map((child) => (
                       <a
@@ -104,7 +99,6 @@ export default function Navbar() {
               )
             )}
 
-            {/* Dil Seçimi (Desktop) */}
             <div className="flex items-center bg-gray-100 rounded-full px-1 py-1 text-sm font-medium">
               <button
                 onClick={() => changeLanguage("TR")}
@@ -127,7 +121,6 @@ export default function Navbar() {
             </div>
           </nav>
 
-          {/* Hamburger */}
           <button
             onClick={() => setMenuOpen(true)}
             className="lg:hidden text-gray-700"
@@ -139,12 +132,6 @@ export default function Navbar() {
         </div>
       </header>
 
-
-
-
-
-
-      {/* FULLSCREEN MOBILE MENU */}
       <div
         className={`fixed inset-0 bg-white z-[60] flex flex-col transform transition-transform duration-300 ${menuOpen ? "translate-y-0" : "-translate-y-full"
           }`}
@@ -159,7 +146,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobil Menü İçerik Kısmı (Kaydırılabilir) */}
         <div className="flex-1 overflow-y-auto p-6 space-y-6 text-lg pb-24">
           {NAV_ITEMS.map((item) =>
             item.children ? (
@@ -174,7 +160,6 @@ export default function Navbar() {
                   </span>
                 </button>
 
-                {/* Dropdown Açıldığında */}
                 {activeDropdown === item.label && (
                   <div className="mt-4 ml-4 space-y-4 text-base text-gray-600 border-l-[0.5px] border-gray-400 pl-4">
                     {item.children.map((child) => (
@@ -202,7 +187,6 @@ export default function Navbar() {
             )
           )}
 
-          {/* Mobil İletişim Butonu (Eksikti, Eklendi) */}
           <div className="pt-4">
             <a
               href="/iletisim"
@@ -213,7 +197,6 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Language */}
           <div className="p-2 border flex items-center justify-center gap-4 bg-gray-50 rounded-xl mt-4">
             <button
               onClick={() => changeLanguage("TR")}
