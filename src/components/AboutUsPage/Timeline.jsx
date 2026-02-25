@@ -5,12 +5,12 @@ const TIMELINE_DATA = [
     {
         year: "2018",
         title: "Temellerin Atılması",
-        description: "Girişimsel nöroradyoloji ve ileri MR görüntüleme alanlarında ilk multidisipliner araştırma grubunun oluşturulması ve çekirdek çalışmaların başlaması."
+        description: "Girişimsel nöroradyoloji ve ileri MR görüntüleme alanlarında ilk multidisipliner araştırma grubumun oluşturulması ve çekirdek çalışmaların başlaması."
     },
     {
         year: "2021",
         title: "İleri MR Altyapısının Kurulması",
-        description: "Nörolojik araştırmalara özel, yüksek çözünürlüklü ve ileri teknoloji MR cihazlarının üniversite altyapısına kazandırılması."
+        description: "Nörolojik araştırmalara özel, yüksek çözünürlüklü ve ileri teknoloji MR cihazlarının GİMRE ile birlikte üniversite altyapısına kazandırılması."
     },
     {
         year: "2023",

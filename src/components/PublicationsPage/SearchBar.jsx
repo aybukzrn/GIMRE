@@ -1,4 +1,3 @@
-// src/components/SearchBar.jsx
 import React from "react";
 
 export default function SearchBar({
@@ -18,7 +17,7 @@ export default function SearchBar({
                     placeholder="Başlık, yazar veya anahtar kelime ara..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#1c2b4a] focus:border-transparent outline-none transition-all"
+                    className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl  focus:border-transparent outline-none transition-all"
                 />
             </div>
 
@@ -27,7 +26,7 @@ export default function SearchBar({
                 <select
                     value={selectedType}
                     onChange={(e) => setSelectedType(e.target.value)}
-                    className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-[#1c2b4a] font-medium text-gray-700 cursor-pointer"
+                    className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none font-medium text-gray-700 cursor-pointer"
                 >
                     <option value="Tümü">Tüm Türler</option>
                     <option value="SCI">SCI/SCI-E</option>
@@ -39,7 +38,7 @@ export default function SearchBar({
                 <select
                     value={selectedYear}
                     onChange={(e) => setSelectedYear(e.target.value)}
-                    className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-[#1c2b4a] font-medium text-gray-700 cursor-pointer"
+                    className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none font-medium text-gray-700 cursor-pointer"
                 >
                     <option value="Tümü">Tüm Yıllar</option>
                     {availableYears.map(year => (
@@ -50,7 +49,7 @@ export default function SearchBar({
                 <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-[#1c2b4a] font-medium text-gray-700 cursor-pointer"
+                    className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none font-medium text-gray-700 cursor-pointer"
                 >
                     <option value="yearDesc">En Yeni</option>
                     <option value="yearAsc">En Eski</option>

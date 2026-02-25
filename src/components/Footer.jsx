@@ -5,31 +5,44 @@ const Footer = () => {
   return (
     <footer className="bg-white text-koyu py-12 lg:py-16 border-t-4 border-sarı mt-auto">
       <div className="max-w-7xl mx-auto px-6 lg:px-20">
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          
+
+        <div className="grid grid-cols-1 text-center lg:grid-cols-4 gap-12 mb-12">
+
           {/* 1. bölüm*/}
           <div className="flex flex-col">
 
-            <a href="/" className="flex flex-col items-center gap-3 mt-2 mb-6">
+            {/* <a href="/" className="flex flex-col items-center gap-3 mt-2 mb-6">
               <img src="/images/logo.jpg" alt="Enstitü Logo" className="h-12 w-28 rounded-8  bg-white p-1" />
               <span className="font-medium text-lg text-koyu leading-tight text-center">
                 Girişimsel MR <br /> Klinik AR-GE Enstitüsü
               </span>
+            </a> */}
+
+            <a href="/" className="flex items-center justify-center">
+              <div className="font-sansation text-center">
+                <h1 className="font-bold text-2xl text-mavi">Prof. Dr. Oktay ALGIN</h1>
+                <p className="text-gray-600">GİMRE Müdürü</p>
+              </div>
             </a>
-            
+
+
+
             <h2 className='text-koyu text-center mb-2 mt-4'>Bize buralardan ulaşabilirsiniz</h2>
             <div className="flex gap-4 items-center justify-center">
-                
+
               <a href="#" className="w-12 h-8 flex items-center p-2 hover:shadow-md rounded-lg">
-                <span><img src="images/linkedin.svg"/></span>
+                <span><img src="images/linkedin.svg" /></span>
               </a>
               <a href="#" className="w-12 h-8 flex items-center p-2 hover:shadow-md rounded-lg">
-                <span><img src="images/youtube.svg"/></span>
+                <span><img src="images/youtube.svg" /></span>
               </a>
               <a href="#" className="w-8 h-8 flex items-center p-2 hover:shadow-md rounded-lg">
                 <span><BsTwitterX /></span>
               </a>
+              <a href="#" className="w-10 h-10 flex items-center p-2 hover:shadow-md rounded-lg">
+                <span><img src="images/ResearchGate.png" alt="" /></span>
+              </a>
+
             </div>
 
 
@@ -39,7 +52,7 @@ const Footer = () => {
           <div>
             <h3 className="text-koyu font-medium  tracking-wide text-lg mb-6 relative inline-block">
               Site Haritası
-              <span className="absolute -bottom-2 left-0 w-2/3 h-[0.5px] bg-slate-400 rounded-full"></span>
+              <div className='w-full h-[0.5px] bg-gray-400 mt-1'></div>
             </h3>
             <ul className="space-y-3">
               <li><a href="/" className="text-sm hover:underline hover:translate-x-1 inline-block transition transform">Ana Sayfa</a></li>
@@ -54,7 +67,7 @@ const Footer = () => {
           <div>
             <h3 className="text-koyu font-medium tracking-wide text-lg mb-6 relative inline-block">
               Odak Alanlarımız
-              <span className="absolute -bottom-2 left-0 w-2/3 h-[0.5px] bg-slate-400 rounded-full"></span>
+              <div className='w-full h-[0.5px] bg-gray-400 mt-1'></div>
             </h3>
             <ul className="space-y-3">
               <li><a href="/arastirma/nororadyoloji" className="text-sm hover:underline hover:translate-x-1 inline-block transition transform">Girişimsel Nöroradyoloji</a></li>
@@ -66,24 +79,22 @@ const Footer = () => {
 
           {/* 4. Sütun: İletişim */}
           <div>
-            <h3 className="text-koyu font-medium tracking-wide  text-lg mb-6 relative inline-block">
+            <h3 className="text-koyu font-medium tracking-wide text-center  text-lg mb-6 relative inline-block">
               İletişim
-              <span className="absolute -bottom-2 left-0 w-2/3 h-[0.5px] bg-slate-400 rounded-full"></span>
+              <div className='w-full h-[0.5px] bg-gray-400 mt-1'></div>
             </h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <span className="mt-1 w-8 h-8"><img src="images/location.svg"/></span>
-                <span className="text-sm leading-relaxed">
-                  Üniversite Hastanesi Kampüsü, MR Araştırma Merkezi<br />
-                  06000, Ankara / Türkiye
-                </span>
+            <ul className="space-y-4 text-center">
+              <li className="flex items-center justify-center gap-3">
+                <span className="mt-1 w-8 h-8 lg:w-14 lg:h-14 ml-5"><img src="images/location1.svg" /></span>
+                <a href="map:" className="text-sm hover:underline transition me-8">Üniversite Hastanesi Kampüsü, MR Araştırma Merkezi<br />
+                  06000, Ankara / Türkiye</a>
               </li>
-              <li className="flex items-center gap-3">
-                <span className="mt-1 w-6 h-6"><img src="images/phone.svg"/></span>
+              <li className="flex items-center justify-center gap-3">
+                <span className="mt-1 w-6 h-6"><img src="images/phone.svg" /></span>
                 <a href="tel:+903120000000" className="text-sm hover:underline transition">+90 (312) 000 00 00</a>
               </li>
-              <li className="flex items-center gap-3">
-                <span className="mt-1 w-7 h-7"><img src="images/mail.svg"/></span>
+              <li className="flex items-center justify-center gap-3">
+                <span className="mt-1 w-7 h-7"><img src="images/mail.svg" /></span>
                 <a href="mailto:info@girisimselmr.edu.tr" className="text-sm hover:underline transition">info@girisimselmr.edu.tr</a>
               </li>
             </ul>
@@ -91,7 +102,7 @@ const Footer = () => {
 
         </div>
 
-        
+
         <div className="border-t border-gray-200 pt-8 flex md:flex-row justify-between lg:items-center gap-6 flex-col-reverse">
           <p className="text-xs text-gray-500 text-center md:text-left">
             &copy; {new Date().getFullYear()} Girişimsel MR Klinik AR-GE Enstitüsü. Tüm hakları saklıdır.

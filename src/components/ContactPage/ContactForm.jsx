@@ -28,7 +28,7 @@ export default function ContactForm() {
     <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg border border-gray-100">
       <h2 className="text-2xl font-bold text-[#1c2b4a] mb-6">Bize Ulaşın</h2>
       <p className="text-gray-600 mb-8">
-        Araştırmalarımız, projelerimiz veya enstitümüz hakkında detaylı bilgi almak için aşağıdaki formu doldurabilirsiniz.
+        Enstitümüz, projelerimiz veya araştırmalarımız hakkında detaylı bilgi almak için aşağıdaki formu doldurabilirsiniz.
       </p>
 
       {isSubmitted ? (
@@ -44,15 +44,15 @@ export default function ContactForm() {
               <label className="block text-sm font-semibold text-gray-700 mb-2">Adınız Soyadınız *</label>
               <input 
                 type="text" name="name" required value={formData.name} onChange={handleChange}
-                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#1c2b4a] focus:border-transparent outline-none transition-all"
-                placeholder="Örn: Oktay Algın"
+                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-[0.5px] focus:ring-[#1c2b4a] focus:border-transparent outline-none transition-all"
+                placeholder="Örn: Erkim Berk Ünsal"
               />
             </div>
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">E-Posta Adresiniz *</label>
               <input 
                 type="email" name="email" required value={formData.email} onChange={handleChange}
-                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#1c2b4a] focus:border-transparent outline-none transition-all"
+                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-[0.5px] focus:ring-[#1c2b4a] focus:border-transparent outline-none transition-all"
                 placeholder="Örn: mail@adres.com"
               />
             </div>
@@ -62,7 +62,7 @@ export default function ContactForm() {
             <label className="block text-sm font-semibold text-gray-700 mb-2">Konu *</label>
             <input 
               type="text" name="subject" required value={formData.subject} onChange={handleChange}
-              className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#1c2b4a] focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-[0.5px] focus:ring-[#1c2b4a] focus:border-transparent outline-none transition-all"
               placeholder="Mesajınızın konusu"
             />
           </div>
@@ -71,7 +71,7 @@ export default function ContactForm() {
             <label className="block text-sm font-semibold text-gray-700 mb-2">Mesajınız *</label>
             <textarea 
               name="message" required rows="5" value={formData.message} onChange={handleChange}
-              className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#1c2b4a] focus:border-transparent outline-none transition-all resize-none"
+              className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-[0.5px] focus:ring-[#1c2b4a] focus:border-transparent outline-none transition-all resize-none"
               placeholder="Lütfen mesajınızı buraya yazın..."
             ></textarea>
           </div>

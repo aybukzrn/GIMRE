@@ -5,8 +5,8 @@ export default function Hero() {
                 İletişim & Ulaşım
             </h1>
             <p className="text-gray-300 max-w-2xl text-lg text-center">
-                GİMRE (Girişimsel Nöroradyoloji, İleri MR ve Yapay Zeka Uygulamaları ve Araştırma Merkezi)
-                ile ilgili her türlü soru, görüş ve iş birliği talebiniz için bize ulaşabilirsiniz.
+            Araştırma grubumuzla iletişime geçmek, akademik iş birlikleri 
+            veya yönettiğim GİMRE bünyesindeki çalışmalarımız hakkında bilgi almak için bana ve ekibime ulaşabilirsiniz.
             </p>
         </header>
 

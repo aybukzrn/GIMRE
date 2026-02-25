@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import logo from "../../public/images/logo.jpg";
 
 const NAV_ITEMS = [
-  { label: "Hakkımızda", href: "/hakkimizda" },
+  { label: "Hakkımda & Enstitü", href: "/hakkimizda" },
   {
     label: "Araştırma Alanları",
     children: [
@@ -18,7 +18,6 @@ const NAV_ITEMS = [
   },
   { label: "Ekip", href: "/ekip" },
   { label: "Etkinlikler", href: "/etkinlikler" },
-  { label: "İş Birlikleri", href: "/is-birlikleri" }
   // { label: "İletişim", href: "/iletisim" },
 ];
 
@@ -63,15 +62,22 @@ export default function Navbar() {
     <>
       <header className="w-full sticky top-0 z-50 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 h-[85px] flex items-center justify-between">
-          <a href="/" className="flex items-center">
+          {/* <a href="/" className="flex items-center">
             <img src={logo} alt="Kurum Logosu" className="h-14 w-auto" />
+          </a> */}
+
+          <a href="/" className="flex items-center">
+            <div className="font-sansation [text-shadow:_2px_2px_4px_rgb(0_0_0_/_20%)]">
+              <h1 className="font-bold text-2xl text-mavi">Prof. Dr. Oktay ALGIN</h1>
+              <p className="text-gray-600">GİMRE Müdürü</p>
+            </div>
           </a>
 
           <nav className="hidden lg:flex items-center gap-8">
             {NAV_ITEMS.map((item) =>
               item.children ? (
                 <div key={item.label} className="relative group">
-                  <button className="text-sm font-medium text-gray-700 hover:text-[#1c2b4a]">
+                  <button className="text-md font-medium text-gray-700 hover:text-[#1c2b4a]">
                     {item.label}
                   </button>
 
@@ -92,7 +98,7 @@ export default function Navbar() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-sm font-medium text-gray-700 hover:text-[#1c2b4a]"
+                  className="text-md font-medium text-gray-700 hover:text-[#1c2b4a]"
                 >
                   {item.label}
                 </a>
@@ -138,7 +144,12 @@ export default function Navbar() {
       >
         {/* Mobil Menü Üst Kısım (Sabit) */}
         <div className="flex justify-between items-center p-6 border-b shrink-0">
-          <img src={logo} alt="Logo" className="h-10" />
+        <a href="/" className="flex items-center">
+            <div className="font-sansation [text-shadow:_2px_2px_4px_rgb(0_0_0_/_15%)]">
+              <h1 className="font-bold text-2xl text-mavi">Prof. Dr. Oktay ALGIN</h1>
+              <p className="text-gray-600">GİMRE Müdürü</p>
+            </div>
+          </a>
           <button onClick={() => setMenuOpen(false)} className="text-gray-700">
             <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />

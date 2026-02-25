@@ -4,14 +4,14 @@ export default function TeamFilter({ filterCategory, setFilterCategory, filterEx
   return (
     <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col md:flex-row mb-8 items-center justify-between gap-4">
       
-      <div className="flex gap-1 rounded-lg overflow-x-auto w-full md:w-auto hide-scrollbar">
+      <div className="flex bg-gray-100 p-1 rounded-lg overflow-x-auto w-full md:w-auto hide-scrollbar">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setFilterCategory(cat)}
-            className={`px-4 py-2 rounded-md text-sm font-semibold whitespace-nowrap transition-all ${
+            className={`px-4 py-2 rounded-md text-sm font-semibold transition-all ${
               filterCategory === cat 
-                ? "bg-white text-[#1c2b4a] underline underline-offset-4 shadow-sm" 
+                ? "bg-white text-[#1c2b4a] shadow-sm" 
                 : "text-gray-500 hover:text-gray-700"
             }`}
           >

@@ -16,6 +16,10 @@ export default function AboutUsPage() {
                 <Hero />
             </section>
 
+            <section className="">
+                <Profile />
+            </section>
+
             <section className="py-10 px-8 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white rounded-2xl shadow-lg transition-shadow mb-10 mt-10">
                 <FoundingStory />
 
@@ -48,11 +52,6 @@ export default function AboutUsPage() {
                 <Timeline />
             </section>
 
-            <div className="w-full h-[0.5px] bg-gray-300 mb-10"></div>
-
-            <section className="">
-                <Profile />
-            </section>
 
             {/* eklersek olur eklemezsek olmaz */}
             <section className="py-12 px-6 max-w-7xl mx-auto text-center border-t border-gray-200">

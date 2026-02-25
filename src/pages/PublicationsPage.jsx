@@ -6,13 +6,11 @@ import PublicationsList from '../components/PublicationsPage/PublicationsList';
 
 export default function PublicationsPage() {
 
-    // 1. STATE'LER (Artık burada!)
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedType, setSelectedType] = useState("Tümü");
     const [selectedYear, setSelectedYear] = useState("Tümü");
     const [sortBy, setSortBy] = useState("yearDesc");
 
-    // 2. YARDIMCI VERİLER
     const availableYears = [...new Set(PUBLICATIONS_DATA.map(p => p.year))].sort((a, b) => b - a);
 
     const resetFilters = () => {
@@ -22,7 +20,6 @@ export default function PublicationsPage() {
         setSortBy("yearDesc");
     };
 
-    // 3. FİLTRELEME MANTIĞI (Burada hesaplanıp aşağıya gönderilecek)
     const filteredPublications = useMemo(() => {
         let result = PUBLICATIONS_DATA;
 
@@ -56,28 +53,12 @@ export default function PublicationsPage() {
         return result;
     }, [searchTerm, selectedType, selectedYear, sortBy]);
 
-    // BibTeX Export Fonksiyonu (Örnek) (bakmam lazım buna)
-    const exportBibTeX = (pub) => {
-        const bibtex = `@article{${pub.authors.split(',')[0].split(' ')[0]}${pub.year},
-      title={${pub.title}},
-      author={${pub.authors}},
-      journal={${pub.journal}},
-      year={${pub.year}},
-      volume={${pub.volume || ''}},
-      pages={${pub.pages || ''}},
-      doi={${pub.doi || ''}}
-    }`;
-        navigator.clipboard.writeText(bibtex);
-        alert("BibTeX formatı panoya kopyalandı!");
-    };
-
     return (
         <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto space-y-8">
 
                 <Hero />
 
-                {/* Arama Çubuğuna state'leri ve değiştirme fonksiyonlarını yolluyoruz */}
                 <SearchBar 
                     searchTerm={searchTerm} setSearchTerm={setSearchTerm}
                     selectedType={selectedType} setSelectedType={setSelectedType}

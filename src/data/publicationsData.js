@@ -60,7 +60,7 @@ export const PUBLICATIONS_DATA = [
       citations: 3
     },
     {
-      id: "pub-004",
+      id: "pub-005",
       type: "Tez",
       title: "Yapay Zeka Destekli MR Görüntüleme Protokollerinin Optimizasyonu",
       authors: "Yılmaz M. (Danışman: Algın O.)",
@@ -75,7 +75,7 @@ export const PUBLICATIONS_DATA = [
       citations: 3
     },
     {
-      id: "pub-004",
+      id: "pub-006",
       type: "Tez",
       title: "Yapay Zeka Destekli MR Görüntüleme Protokollerinin Optimizasyonu",
       authors: "Yılmaz M. (Danışman: Algın O.)",
@@ -90,7 +90,7 @@ export const PUBLICATIONS_DATA = [
       citations: 3
     },
     {
-      id: "pub-004",
+      id: "pub-007",
       type: "Tez",
       title: "Yapay Zeka Destekli MR Görüntüleme Protokollerinin Optimizasyonu",
       authors: "Yılmaz M. (Danışman: Algın O.)",

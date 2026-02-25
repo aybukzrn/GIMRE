@@ -18,7 +18,7 @@ export default function Navigation({ searchTerm }) {
     return(
         <aside className="lg:col-span-1 bg-white p-6 rounded-2xl h-min shadow-lg lg:sticky top-28">
             <h3 className="text-xl text-center mb-6 font-bold text-[#1c2b4a] uppercase tracking-wide">
-              BİLİMSEL Alanlar
+              ÇALIŞMA ALANLARI
             </h3>
             
             <nav className="flex flex-col space-y-3">

@@ -1,7 +1,7 @@
 export default function FoundingStory() {
     return (
         <div>
-            <h2 className="text-3xl font-bold text-[#1c2b4a] mb-6">Kuruluş Hikayemiz</h2>
+            <h2 className="text-3xl font-bold text-[#1c2b4a] mb-6">GİMRE'nin Kuruluşu ve Vizyonum</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
                 Ankara Üniversitesi Girişimsel MR Klinik AR-GE Enstitüsü (GİMRE),
                 Cumhurbaşkanlığının 19.04.2023 tarih/7139 sayılı kararı ile kurulmuştur.

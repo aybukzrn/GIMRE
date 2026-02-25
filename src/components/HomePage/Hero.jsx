@@ -1,14 +1,23 @@
+
+
 export default function Hero() {
     return (
         <div className="">
             <div className="absolute inset-0 bg-black opacity-40"></div>
 
+            <img src="/images/gimre-ekip.jpg" alt="" className="opacity-25 absolute inset-0 w-full h-full object-cover"/>
+
             <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center text-center">
-                <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                    Girişimsel MR Klinik AR-GE Enstitüsü
+                <div className="mb-6">
+                <h1 className="text-3xl lg:text-5xl font-bold leading-tight mb-2 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]">
+                    Prof. Dr. Oktay ALGIN ve Ekibi
                 </h1>
+                <p className="text-gray-300 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]">Girişimsel MR Klinik AR-GE Enstitüsü Müdürü | Nöroradyoloji ve İleri MR Görüntüleme Uzmanı</p>
+
+
+                </div>
                 <p className="text-lg lg:text-xl text-gray-200 mb-10 max-w-3xl leading-relaxed">
-                    Yenilikçi MR görüntüleme teknikleri ve girişimsel radyoloji alanında öncü araştırmalar yaparak tıp dünyasına yön veriyoruz. Amacımız, klinik uygulamalara doğrudan etki edecek bilimsel keşifleri hayata geçirmektir.
+                    Ben ve araştırma ekibim yenilikçi MR görüntüleme teknikleri ve girişimsel radyoloji alanında öncü araştırmalar yaparak tıp dünyasına yön veriyoruz. Amacımız, klinik uygulamalara doğrudan etki edecek bilimsel keşifleri hayata geçirmektir.
                 </p>
 
 
