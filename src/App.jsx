@@ -15,9 +15,6 @@ import ProjectPage from './pages/ProjectsPage';
 import TeamPage from './pages/TeamPage';
 import ContactPage from './pages/ContactPage';
 
-// import Ekip from './pages/Ekip';
-// import Iletisim from './pages/Iletisim';
-
 function App() {
   return (
     <Router>
@@ -35,12 +32,6 @@ function App() {
             <Route path="/projeler" element={<ProjectPage />} />
             <Route path="/ekip" element={<TeamPage />} />
             <Route path="/iletisim" element={<ContactPage />} />
-
-
-            {/* <Route path="/arastirmalar" element={<ArastirmaAlanlari />} />
-            <Route path="/yayinlar" element={<Yayinlar />} />
-            <Route path="/ekip" element={<Ekip />} />
-            <Route path="/iletisim" element={<Iletisim />} />  */}
 
             {/* 404 Sayfası (Kullanıcı olmayan bir linke giderse) */}
             <Route path="*" element={
